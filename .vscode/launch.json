@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MovieOn: Run with TMDB API key",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "args": [
+        "--dart-define=TMDB_API_KEY=${input:tmdbApiKey}"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "tmdbApiKey",
+      "type": "promptString",
+      "description": "Digite sua TMDB API key"
+    }
+  ]
+}
