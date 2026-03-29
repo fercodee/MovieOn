@@ -35,7 +35,7 @@ class LibraryLocalDataSourceImpl implements LibraryLocalDataSource {
     final data = jsonDecode(raw) as List<dynamic>;
     return data
         .whereType<Map<String, dynamic>>()
-        .map(MediaItemModel.fromLocalMap)
+        .map<MediaItem>(MediaItemModel.fromLocalMap)
         .toList();
   }
 
@@ -61,7 +61,7 @@ class LibraryLocalDataSourceImpl implements LibraryLocalDataSource {
     final data = jsonDecode(raw) as List<dynamic>;
     return data
         .whereType<Map<String, dynamic>>()
-        .map(ReviewModel.fromMap)
+        .map<Review>(ReviewModel.fromMap)
         .toList();
   }
 
